@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "clean": "find dist -type f -maxdepth 1 -iregex '.*.js[.]*.*' -delete",
+    "clean": "find dist -type f -maxdepth 1 -delete",
     "start": "node dist/server.js",
     "dev": "webpack-dev-server --hot --inline --progress --colors --config ./webpack/dev/webpack.dev.config.js",
     "webpack:build": "webpack --progress --colors --config ./webpack/webpack.config.js",
