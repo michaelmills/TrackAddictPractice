@@ -1,5 +1,6 @@
 import express from 'express';
 import React from 'react';
+import path from 'path';
 import {renderToString} from 'react-dom/server';
 import {match, RoutingContext} from 'react-router';
 
@@ -22,7 +23,7 @@ const portNumber = process.env.PORT || 5050;
 
 app.set('port', portNumber);
 
-app.use(express.static('./../dist'));
+app.use(express.static(path.join(__dirname, '..', 'dist')));
 app.use('/favicon.ico', (req, res) => res.send(''));
 
 app.use((req, res) => {

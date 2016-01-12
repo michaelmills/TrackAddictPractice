@@ -3,4 +3,6 @@ import { render } from 'react-dom';
 import { Router } from 'react-router';
 import routes from './routes';
 
-render( <Router routes={routes} />, document.getElementById("app"));
+import './../style/css/bootstrap.min.css';
+
+render(<Router routes={routes} />, document.getElementById('app'));
