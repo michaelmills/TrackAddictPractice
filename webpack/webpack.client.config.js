@@ -1,6 +1,7 @@
 var path = require('path');
 var webpack = require('webpack');
 var config = require('./common.js');
+console.log(path.resolve(__dirname, '../app'));
 
 module.exports = {
     // The configuration for the client
@@ -13,16 +14,14 @@ module.exports = {
         client: './client.jsx'
     },
     output: {
-        // The output directory as absolute path
-        path: config.dist,
-        // The filename of the entry chunk as relative path inside the output.path directory
+        path: config.clientOutputPath,
         filename: '[name].js',
-        // The output path from the view of the Javascript
         publicPath: config.publicPath
     },
 
     module: { loaders: config.loaders },
     resolve: {
+        root: path.resolve(__dirname, '../app'),
         extensions: ['', '.js', '.jsx', 'css'],
         modulesDirectories: [ 'app', 'node_modules' ]
     },

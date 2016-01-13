@@ -8,7 +8,7 @@ import routes from './../app/routes';
 import template from './template/template';
 
 const app = express();
-const portNumber = process.env.PORT || 5050;
+const port = process.env.PORT || 5050;
 
 // mongoose.connect('mongodb://localhost:27017/track-bootcards');
 
@@ -21,9 +21,10 @@ const portNumber = process.env.PORT || 5050;
 //     console.info('Success: Connected to database.');
 // });
 
-app.set('port', portNumber);
+app.set('port', port);
 
-app.use(express.static(path.join(__dirname, '..', 'dist')));
+app.use('/', express.static(path.join(__dirname, '../dist/static/')));
+// app.use(express.static(path.join(__dirname, '..', 'dist')));
 app.use('/favicon.ico', (req, res) => res.send(''));
 
 app.use((req, res) => {

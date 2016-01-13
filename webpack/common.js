@@ -1,11 +1,14 @@
 var path = require('path');
 var appPath = path.join(__dirname, '../app');
 var dist = path.join(__dirname, '../dist');
+var clientOutputPath = path.join(__dirname, '../dist');
+var publicPath = '/static/';
 
 module.exports = {
-    publicPath: '/assets/',
     appPath: appPath,
     dist: dist,
+    clientOutputPath: clientOutputPath,
+    publicPath: publicPath,
 
     loaders: [
       {

@@ -1,5 +1,6 @@
 var webpack = require('webpack');
 var config = require('./common.js');
+var path = require('path');
 
 module.exports = {
     // The configuration for the server-side rendering
@@ -11,12 +12,8 @@ module.exports = {
     },
     target: 'node',
     output: {
-      // The output directory as absolute path
       path: config.dist,
-      // The filename of the entry chunk as relative path inside the output.path directory
       filename: '[name].js',
-      // The output path from the view of the Javascript
-      publicPath: config.publicPath,
       libraryTarget: 'commonjs2'
     },
     module: {

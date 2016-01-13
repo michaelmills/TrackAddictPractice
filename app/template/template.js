@@ -19,7 +19,7 @@ export default function(renderedContent) {
     </head>
     <body>
         <div id="app">${renderedContent}</div>
-        <script src="/dist/client.js"></script>
+        <script src="/static/client.js"></script>
 
         <!-- jQuery -->
         <script src="js/jquery.js"></script>
