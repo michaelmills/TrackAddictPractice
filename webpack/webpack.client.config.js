@@ -1,7 +1,6 @@
 var path = require('path');
 var webpack = require('webpack');
 var config = require('./common.js');
-console.log(path.resolve(__dirname, '../app'));
 
 module.exports = {
     // The configuration for the client
@@ -14,7 +13,7 @@ module.exports = {
         client: './client.jsx'
     },
     output: {
-        path: config.clientOutputPath,
+        path: config.staticPath,
         filename: '[name].js',
         publicPath: config.publicPath
     },

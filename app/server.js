@@ -23,7 +23,7 @@ const port = process.env.PORT || 5050;
 
 app.set('port', port);
 
-app.use('/', express.static(path.join(__dirname, '../dist/static/')));
+app.use('/static', express.static(path.join(__dirname, 'dist/static')));
 // app.use(express.static(path.join(__dirname, '..', 'dist')));
 app.use('/favicon.ico', (req, res) => res.send(''));
 
